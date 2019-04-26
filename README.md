@@ -1,0 +1,1 @@
++ getting the data for all spacex capsules so anyone can easily get their details of each.
