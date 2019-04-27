@@ -1,6 +1,7 @@
-package com.sparta.spacexapi.capsules;
+package com.sparta.spacexapi.singlecapsule;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Map;
 
 public class SpacexCapsuleDTO {
 
@@ -8,12 +9,12 @@ private String capsule_serial;
 private String capsule_id;
 private String status;
 private String original_launch;
-private String original_launch_unix;
-private HashMap<String, String> missions;
-private String landings;
+private long original_launch_unix;
+private ArrayList<Map<String, Object>> missions;
+private int landings;
 private String type;
 private String details;
-private String reuse_count;
+private int reuse_count;
 
     public String getCapsule_serial() {
         return capsule_serial;
@@ -31,15 +32,15 @@ private String reuse_count;
         return original_launch;
     }
 
-    public String getOriginal_launch_unix() {
+    public long getOriginal_launch_unix() {
         return original_launch_unix;
     }
 
-    public HashMap<String, String> getMissions() {
+    public ArrayList<Map<String, Object>> getMissions() {
         return missions;
     }
 
-    public String getLandings() {
+    public int getLandings() {
         return landings;
     }
 
@@ -51,7 +52,8 @@ private String reuse_count;
         return details;
     }
 
-    public String getReuse_count() {
+    public int getReuse_count() {
         return reuse_count;
     }
+
 }

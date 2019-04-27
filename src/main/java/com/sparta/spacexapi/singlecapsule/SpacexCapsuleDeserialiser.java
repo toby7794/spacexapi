@@ -1,4 +1,4 @@
-package com.sparta.spacexapi.capsules;
+package com.sparta.spacexapi.singlecapsule;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 

@@ -1,5 +1,6 @@
 package com.sparta.spacexapi.httpcaller;
 
+import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
 import com.sparta.spacexapi.propertysetup.Properties;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -13,11 +14,11 @@ public class HTTPManager {
 
     private CloseableHttpResponse fullResponse;
 
-    public void makeAllCapsulesCall(){
+    public void makeSingleCapsuleCall(String capsuleCode){
 
         try {
             CloseableHttpClient httpClient = HttpClients.createDefault();
-            HttpGet getCapsules = new HttpGet(Properties.getBaseurl() + Properties.getCapsules());
+            HttpGet getCapsules = new HttpGet(Properties.getBaseurl() + Properties.getCapsules() +"/" + capsuleCode);
             fullResponse = httpClient.execute(getCapsules);
         } catch (IOException e) {
             e.printStackTrace();
