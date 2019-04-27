@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
         SingleCapsuleService single = new SingleCapsuleService("C101");
-        System.out.println(single.getDeserialiser().getSpacexCapsuleDTO().getMissions().get(0).get("flight"));
+        System.out.println(single.getDeserialiser().getSpacexCapsuleDTO().getCapsule_serial());
 
     }
 }
