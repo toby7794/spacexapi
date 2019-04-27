@@ -1,5 +1,8 @@
 package com.sparta.spacexapi;
 
+import com.sparta.spacexapi.capsules.SpacexCapsuleDeserialiser;
+import com.sparta.spacexapi.httpcaller.HTTPManager;
+
 /**
  * Hello world!
  *
@@ -8,6 +11,12 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        HTTPManager capsuleLatestCall = new HTTPManager();
+        String values = capsuleLatestCall.getResponseBody();
+        SpacexCapsuleDeserialiser parser = new SpacexCapsuleDeserialiser(values);
+        System.out.println(parser.getSpacexCapsuleDTO().getDetails());
+
+
+
     }
 }
