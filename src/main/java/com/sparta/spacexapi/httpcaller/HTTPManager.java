@@ -47,6 +47,17 @@ public class HTTPManager {
         }
     }
 
+    public void makeSpacexCompanyInfoCall(){
+
+        try {
+            CloseableHttpClient httpClient = HttpClients.createDefault();
+            HttpGet getCapsules = new HttpGet(Properties.getBaseurl() + Properties.getInfo());
+            fullResponse = httpClient.execute(getCapsules);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public String getResponseBody(){
         String bodyResult = null;
         try{

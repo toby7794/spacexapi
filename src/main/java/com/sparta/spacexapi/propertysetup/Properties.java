@@ -9,11 +9,13 @@ public class Properties {
     private static final String CAPSULES = "capsules";
     private static final String UPCOMING = "upcoming_capsules";
     private static final String PASTCAPSULES = "past_capsules";
+    private static final String INFO = "info";
 
     private static String capsules;
     private static String upcoming;
     private static String pastCapsules;
     private static String baseURL;
+    private static String info;
 
     private Properties() {
     }
@@ -46,6 +48,13 @@ public class Properties {
         return pastCapsules;
     }
 
+    public static String getInfo() {
+        if (info == null){
+            setup();
+        }
+        return info;
+    }
+
     public static void setup(){
 
         java.util.Properties appproperties = new java.util.Properties();
@@ -58,5 +67,6 @@ public class Properties {
         baseURL = appproperties.getProperty(BASEURL);
         upcoming = appproperties.getProperty(UPCOMING);
         pastCapsules = appproperties.getProperty(PASTCAPSULES);
+        info = appproperties.getProperty(INFO);
     }
 }
