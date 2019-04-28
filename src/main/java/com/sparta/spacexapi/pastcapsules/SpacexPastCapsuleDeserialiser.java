@@ -1,9 +1,7 @@
 package com.sparta.spacexapi.pastcapsules;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sparta.spacexapi.service.PastCapsuleService;
-
-import java.util.ArrayList;
+import com.sparta.spacexapi.pastcapsules.SpacexPastCapsuleDTO;
 
 public class SpacexPastCapsuleDeserialiser {
 

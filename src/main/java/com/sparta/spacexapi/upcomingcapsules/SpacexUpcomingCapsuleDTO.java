@@ -1,12 +1,9 @@
-package com.sparta.spacexapi.pastcapsules;
-
-import com.sparta.spacexapi.singlecapsule.SpacexCapsuleDTO;
+package com.sparta.spacexapi.upcomingcapsules;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-public class SpacexPastCapsuleDTO {
-
+public class SpacexUpcomingCapsuleDTO {
 
     private String capsule_serial;
     private String capsule_id;

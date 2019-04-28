@@ -7,11 +7,11 @@ public class Properties {
 
     private static final String BASEURL = "base_url";
     private static final String CAPSULES = "capsules";
-    private static final String UPCOMMING = "upcomming_capsules";
+    private static final String UPCOMING = "upcoming_capsules";
     private static final String PASTCAPSULES = "past_capsules";
 
     private static String capsules;
-    private static String upcomming;
+    private static String upcoming;
     private static String pastCapsules;
     private static String baseURL;
 
@@ -25,11 +25,11 @@ public class Properties {
         return capsules;
     }
 
-    public static String getUpcomming() {
-        if (upcomming == null){
+    public static String getUpcoming() {
+        if (upcoming == null){
             setup();
         }
-        return upcomming;
+        return upcoming;
     }
 
     public static String getBaseurl() {
@@ -56,7 +56,7 @@ public class Properties {
         }
         capsules = appproperties.getProperty(CAPSULES);
         baseURL = appproperties.getProperty(BASEURL);
-        upcomming = appproperties.getProperty(UPCOMMING);
+        upcoming = appproperties.getProperty(UPCOMING);
         pastCapsules = appproperties.getProperty(PASTCAPSULES);
     }
 }
