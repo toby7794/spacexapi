@@ -5,11 +5,8 @@ public class App
 {
     public static void main( String[] args )
     {
-//        SpacexCompanyInfoService upcoming = new SpacexCompanyInfoService();
-//        System.out.println(upcoming.getDeserialiser().getSpacexInfoDTO().getEmployees());
-
         SpacexService service = new SpacexService();
-        System.out.println(service.selectOrbittingSunTeslaService().getDeserialiser().getOrbittingTeslaDTO().getSpeed_mph());
+        System.out.println(service.selectHistoricalMileStoneService().getDeserialiser().getHistoricalMileStonesDTO().get(1).getLinks().get("reddit"));
 
     }
 }

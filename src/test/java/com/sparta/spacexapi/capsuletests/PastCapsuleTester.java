@@ -16,7 +16,7 @@ public class PastCapsuleTester {
 
     @Test
     public void isLength(){
-        Assert.assertEquals(pastSingle.selectPastCapsulesService().getDeserialiser().getSpacexPastCapsuleDTO().length, 14);
+        Assert.assertEquals(pastSingle.selectPastCapsulesService().getDeserialiser().getPastCapsuleDTO().size(), 14);
     }
 
     @Test

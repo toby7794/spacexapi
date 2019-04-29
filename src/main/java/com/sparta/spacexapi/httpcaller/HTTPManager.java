@@ -68,6 +68,18 @@ public class HTTPManager {
         }
     }
 
+    public void makeHistoricalMileStonesCall(){
+        try {
+            CloseableHttpClient httpClient = HttpClients.createDefault();
+            HttpGet getMileStones = new HttpGet(Properties.getBaseurl() + Properties.getHistory());
+            fullResponse = httpClient.execute(getMileStones);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
     public String getResponseBody(){
         String bodyResult = null;
         try{

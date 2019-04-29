@@ -4,11 +4,12 @@ import com.sparta.spacexapi.services.*;
 
 public class SpacexService {
 
-    PastCapsuleService pastCapsules;
-    SingleCapsuleService singleCapsule;
-    SpacexCompanyInfoService information;
-    UpcomingCapsuleService upcomingCapsule;
-    OrbittingSunTeslaService teslaRoadster;
+    private PastCapsuleService pastCapsules;
+    private SingleCapsuleService singleCapsule;
+    private SpacexCompanyInfoService information;
+    private UpcomingCapsuleService upcomingCapsule;
+    private OrbittingSunTeslaService teslaRoadster;
+    private HistoricalMileStoneService historicalMileStone;
 
 
     public PastCapsuleService selectPastCapsulesService(){
@@ -34,6 +35,11 @@ public class SpacexService {
     public OrbittingSunTeslaService selectOrbittingSunTeslaService(){
         teslaRoadster = new OrbittingSunTeslaService();
         return teslaRoadster;
+    }
+
+    public HistoricalMileStoneService selectHistoricalMileStoneService(){
+        historicalMileStone = new HistoricalMileStoneService();
+        return historicalMileStone;
     }
 
 }
