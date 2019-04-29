@@ -1,4 +1,4 @@
-package com.sparta.spacexapi.service;
+package com.sparta.spacexapi.services;
 
 import com.sparta.spacexapi.singlecapsule.SpacexCapsuleDeserialiser;
 import com.sparta.spacexapi.httpcaller.HTTPManager;

@@ -10,12 +10,14 @@ public class Properties {
     private static final String UPCOMING = "upcoming_capsules";
     private static final String PASTCAPSULES = "past_capsules";
     private static final String INFO = "info";
+    private static final String ROADSTER = "roadster";
 
     private static String capsules;
     private static String upcoming;
     private static String pastCapsules;
     private static String baseURL;
     private static String info;
+    private static String roadster;
 
     private Properties() {
     }
@@ -55,6 +57,13 @@ public class Properties {
         return info;
     }
 
+    public static String getRoadster(){
+        if (roadster == null){
+            setup();
+        }
+        return roadster;
+    }
+
     public static void setup(){
 
         java.util.Properties appproperties = new java.util.Properties();
@@ -68,5 +77,6 @@ public class Properties {
         upcoming = appproperties.getProperty(UPCOMING);
         pastCapsules = appproperties.getProperty(PASTCAPSULES);
         info = appproperties.getProperty(INFO);
+        roadster = appproperties.getProperty(ROADSTER);
     }
 }

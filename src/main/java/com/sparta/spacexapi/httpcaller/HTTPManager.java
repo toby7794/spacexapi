@@ -58,6 +58,16 @@ public class HTTPManager {
         }
     }
 
+    public void makeSpacexRoadsterCall(){
+        try {
+            CloseableHttpClient httpClient = HttpClients.createDefault();
+            HttpGet getCapsules = new HttpGet(Properties.getBaseurl() + Properties.getRoadster());
+            fullResponse = httpClient.execute(getCapsules);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public String getResponseBody(){
         String bodyResult = null;
         try{

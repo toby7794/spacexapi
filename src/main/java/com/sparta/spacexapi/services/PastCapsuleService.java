@@ -1,8 +1,7 @@
-package com.sparta.spacexapi.service;
+package com.sparta.spacexapi.services;
 
 import com.sparta.spacexapi.httpcaller.HTTPManager;
 import com.sparta.spacexapi.pastcapsules.SpacexPastCapsuleDeserialiser;
-import com.sparta.spacexapi.singlecapsule.SpacexCapsuleDeserialiser;
 
 public class PastCapsuleService {
 
